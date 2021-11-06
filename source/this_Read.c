@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/10/28 21:05:39 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:16:47 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	**this_Read(char *file, t_game *game)
 	int		fd;
 	int		gnl;
 
-	game->obj_map.map = columns(file, &*game);
-	if (game->obj_map.map == NULL)
+	game->map = columns(file, &*game);
+	if (game->map == NULL)
 	{
 		printf("ERROR!miau\n");
 		exit (1);
@@ -28,15 +28,24 @@ char	**this_Read(char *file, t_game *game)
 	index = 0;
 	gnl = 1;
 	while (gnl)
-		gnl = get_next_line(fd, &game->obj_map.map[index++]);
-	game->obj_map.map[index] = NULL;
-	game->obj_map.col = ft_strlen (game->obj_map.map[0]);
+		gnl = get_next_line(fd, &game->map[index++]);
+	game->map[index] = NULL;
+	game->col = ft_strlen(game->map[0]);
 	/*int i;
 	i = 0;
 	while (i < index)
 	{
-		printf("%s", game->obj_map.map[i++]);
+		printf("%s", game->map[i++]);
 	}*/
+    /*for (int j = 0; j < game->row; j++)
+    {
+        for (int x = 0; x < game->col; x++)
+        {
+            printf("%c", game->map[j][x]);
+        }
+		printf("\n");
+}
+	printf("%s", game->obj_map.map[1]);*/
 	close(fd);
-	return (game->obj_map.map);
+	return (game->map);
 }

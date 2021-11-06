@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/10/28 21:25:15 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:15:30 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,18 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#define true 1
-#define false 0
-
 
 typedef struct s_map
 {
-	int		row;
-	int		col;
-	char	**map;
+
 }	t_map;
 
 typedef struct s_game
 {
-	t_map	obj_map;
+	//t_map	obj_map;
+	char	**map;
+	int		row;
+	int		col;
 }	t_game;
 
 

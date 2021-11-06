@@ -1,16 +1,34 @@
 #include "../includes/so_long.h"
 
-int this_CheckWalls (t_game *game)
+int	this_CheckWalls(t_game *game)
 {
-	int valid;
-	valid = true;
-	while(game->obj_map.col)
+	int thisRow;
+	int thisCol;
+
+	thisRow = 0;
+
+	//printf("%d", game->col - 1);
+
+	while (thisRow < game->row)
 	{
-		game->obj_map.row = 0;
-		while(game->obj_map.map[game->obj_map.col][game->obj_map.row])
+		thisCol = 0;
+		while (thisCol < game->col)
 		{
-			if(check(&game) == false)
-				valid = true;
+			//printf("%c", game->map[thisRow][thisCol]);
+			if (thisRow == 0 || thisRow == (game->row - 1) || thisCol == 0 || thisCol == (game->col - 1))
+			{
+				printf("%c", game->map[thisRow][thisCol]);
+					if (game->map[thisRow][thisCol] != '1')
+					{
+						printf("Map with invalids rows!\n");
+						exit(1);
+						return (1);
+					}
+			}
+			thisCol++;
 		}
+		thisRow++;
+		//printf("\n");
 	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/10/28 20:41:51 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:17:30 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ int	main(int argc, char **argv)
 		exit(1);
 	}
 
-	game.obj_map.map = this_Read(argv[1], &game);
-	if(!game.obj_map.map)
+	game.map = this_Read(argv[1], &game);
+	if(!game.map)
 		return (0);
-	/*if (this_CheckWalls(&game) == 0)
+	if (this_CheckWalls(&game) == 1)
 	{
-		ft_free_matriz(map);
+		ft_free_matriz(game.map);
 		exit(1);
-	}*/
-
+	}
 }
