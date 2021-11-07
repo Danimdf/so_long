@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 21:14:32 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 21:47:34 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int	check_File(char *file, char *sufx);
 void this_check_maps (t_game *game);
 int	map_walls(t_game *game);
 int check_inboard(t_game *game);
+int check_floor(t_game *game);
 
 //libft
 int ft_strcmp(const char *str1, const char *str2);

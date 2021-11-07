@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:17:47 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 21:30:32 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 21:34:32 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ int check_inboard(t_game *game)
 		}
 		thisRow++;
 	}
-	if (game->obj_map.obj_P != 1  || game->obj_map.obj_E != 1 || game->obj_map.obj_C == 0)
+	if (game->obj_map.obj_P != 1  || \
+	game->obj_map.obj_E != 1 || game->obj_map.obj_C == 0)
 	{
-		printf("Map Inavalid: Every map must have a P, an E and at least a C\n");
+		printf("Map Invalid: Every map must have a P, an E and at least a C\n");
 		exit(1);
 		return (1);
 	}
