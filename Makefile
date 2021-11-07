@@ -19,7 +19,9 @@ FILES = main.c \
 		./gnl/get_next_line.c \
 		./gnl/get_next_line_utils.c \
 		./source/this_Read.c \
-		./source/this_CheckWalls.c
+		./source/this_check_maps.c \
+		./source/map_walls.c \
+		./source/check_inboard.c \
 
 
 

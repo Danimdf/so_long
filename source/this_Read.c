@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 17:16:47 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 19:56:57 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	**this_Read(char *file, t_game *game)
 	int		fd;
 	int		gnl;
 
-	game->map = columns(file, &*game);
+	game->map = columns(file, game);
 	if (game->map == NULL)
 	{
-		printf("ERROR!miau\n");
+		printf("Error!miau\n");
 		exit (1);
 	}
 	fd = open(file, O_RDONLY);
@@ -30,7 +30,8 @@ char	**this_Read(char *file, t_game *game)
 	while (gnl)
 		gnl = get_next_line(fd, &game->map[index++]);
 	game->map[index] = NULL;
-	game->col = ft_strlen(game->map[0]);
+	game->col = (ft_strlen(game->map[0]) - 1);
+	//printf("%s", game->map[0]);
 	/*int i;
 	i = 0;
 	while (i < index)
