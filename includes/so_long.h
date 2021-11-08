@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 21:47:34 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/06 22:15:37 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ typedef struct s_game
 	char	**map;
 	int		row;
 	int		col;
+	void	*mlx;
+	void	*mlx_win;
 }	t_game;
 
 

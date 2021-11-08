@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 19:45:56 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/07 20:21:11 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,8 @@ int	main(int argc, char **argv)
 	if(!game.map)
 		return (0);
 	this_check_maps(&game);
+	game.mlx = mlx_init();
+	game.mlx_win = mlx_new_window(game.mlx, game.row * 32, game.col * 32, "So_long");
+
+	mlx_loop(game.mlx);
 }
