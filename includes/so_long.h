@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 22:15:37 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/07 22:53:02 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+typedef struct s_img
+{
+	void	*img_ptr;
+}	t_img;
+
 typedef struct s_map
 {
 	int obj_P;
@@ -34,6 +39,7 @@ typedef struct s_map
 
 typedef struct s_game
 {
+	t_img	img;
 	t_map	obj_map;
 	char	**map;
 	int		row;
@@ -53,6 +59,12 @@ char	**columns(char *file, t_game *game);
 int	ft_count_line(char **matriz);
 
 void	ft_free_matriz(char **matriz);
+
+//print map
+int print_map(t_game *game);
+int load_sprites (t_game *game);
+
+
 
 //see if the map is ok
 int	check_File(char *file, char *sufx);

@@ -22,7 +22,9 @@ FILES = main.c \
 		./source/this_check_maps.c \
 		./source/map_walls.c \
 		./source/check_inboard.c \
-		./source/check_floor.c
+		./source/check_floor.c \
+		./source/print_map.c \
+		./source/load_sprites.c \
 
 
 
