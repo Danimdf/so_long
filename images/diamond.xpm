@@ -1,5 +1,5 @@
 /* XPM */
-static char *_694b0a909ec403da5195dfe0abe5b25W1B4tYpCET75dut2[] = {
+static char *diamond[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 82 1 ",
 "  c #130B1B",

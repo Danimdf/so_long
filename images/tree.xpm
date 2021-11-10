@@ -1,5 +1,5 @@
 /* XPM */
-static char *_1337ad812ea4da9da7c5227002bb07d9DqlAmt6V39i8ZqB[] = {
+static char *tree[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 13 1 ",
 "  c #323234",

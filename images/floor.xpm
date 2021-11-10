@@ -1,5 +1,5 @@
 /* XPM */
-static char *_b48b587026a4881abd88bb30d3d2d6f4STVrbcMt8w2m9PE[] = {
+static char *floor[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 4 1 ",
 "  c #ABD03C",

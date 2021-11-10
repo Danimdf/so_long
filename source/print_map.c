@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 22:12:02 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/07 22:31:02 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:22:18 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 int print_map(t_game *game)
 {
-	int thisRow;
-	int thisCol;
+	int this_row;
+	int this_col;
 
-	thisRow = 0;
-	thisCol = 0;
-	while (thisRow < game->row)
+	this_row = 0;
+	while (this_row < game->row)
 	{
-		thisCol = 0;
-		while (thisCol < game->col)
+		this_col = 0;
+		while (this_col < game->col)
 		{
-			load_sprites(game);
-			thisCol++;
+			load_sprites(game, this_col, this_row);
+			this_col++;
 		}
-		thisRow++;
+		this_row++;
 	}
 	return (0);
 }

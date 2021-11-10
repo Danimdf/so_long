@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:17:47 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 21:34:32 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:04:30 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int check_inboard(t_game *game)
 	int thisRow;
 	int thisCol;
 
-	game->obj_map.obj_P = 0;
-	game->obj_map.obj_E = 0;
-	game->obj_map.obj_C = 0;
+	game->obj_map.obj_p = 0;
+	game->obj_map.obj_e = 0;
+	game->obj_map.obj_c = 0;
 	thisRow = 0;
 	while (thisRow < game->row)
 	{
@@ -27,17 +27,17 @@ int check_inboard(t_game *game)
 		while (thisCol <= game->col)
 		{
 			if (game->map[thisRow][thisCol] == 'P')
-				game->obj_map.obj_P++;
+				game->obj_map.obj_p++;
 			if (game->map[thisRow][thisCol] == 'E')
-				game->obj_map.obj_E++;
+				game->obj_map.obj_e++;
 			if (game->map[thisRow][thisCol] == 'C')
-				game->obj_map.obj_C++;
+				game->obj_map.obj_c++;
 			thisCol++;
 		}
 		thisRow++;
 	}
-	if (game->obj_map.obj_P != 1  || \
-	game->obj_map.obj_E != 1 || game->obj_map.obj_C == 0)
+	if (game->obj_map.obj_p != 1  || \
+	game->obj_map.obj_e != 1 || game->obj_map.obj_c == 0)
 	{
 		printf("Map Invalid: Every map must have a P, an E and at least a C\n");
 		exit(1);
