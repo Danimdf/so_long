@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_map.c                                        :+:      :+:    :+:   */
+/*   key_input.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 22:12:02 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 19:54:23 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/11/09 21:53:25 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/11/11 20:39:39 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int print_map(t_game *game)
+int	key_input(int key, t_game *game)
 {
-	int this_row;
-	int this_col;
-
-	this_row = 0;
-	while (this_row < game->row)
+	if (key == 65307)
 	{
-		this_col = 0;
-		while (this_col < game->col)
-		{
-
-			load_sprites(game, this_col, this_row);
-			this_col++;
-		}
-		this_row++;
+		exit(1);
 	}
+	else {
+		player_move(key, game);
+	}
+	print_map(game);
 	return (0);
 }

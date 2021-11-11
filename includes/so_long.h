@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/09 21:03:37 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/11 20:23:45 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,16 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+typedef struct s_vector
+{
+	int row_pos;
+	int col_pos;
+} t_vector;
+
+
 typedef struct s_img
 {
+	t_vector position;
 	void	*img_ptr;
 	int		img_width;
 	int		img_height;
@@ -62,13 +70,17 @@ int	ft_count_line(char **matriz);
 
 void	ft_free_matriz(char **matriz);
 
-//print map
-int print_map(t_game *game);
-int load_sprites (t_game *game, int this_col, int this_row);
-int key_press(int keycode);
 int	mlx_close();
 
 
+//move
+int init_position(t_game *game);
+int	key_input(int key, t_game *game);
+int player_move(int key, t_game *game);
+
+//print map
+int print_map(t_game *game);
+int load_sprites (t_game *game, int this_col, int this_row);
 
 //see if the map is ok
 int	check_File(char *file, char *sufx);

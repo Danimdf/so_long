@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_map.c                                        :+:      :+:    :+:   */
+/*   init_position.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 22:12:02 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 19:54:23 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/11/11 17:35:17 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/11/11 19:35:03 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int print_map(t_game *game)
+int init_position(t_game *game)
 {
 	int this_row;
 	int this_col;
@@ -23,8 +23,11 @@ int print_map(t_game *game)
 		this_col = 0;
 		while (this_col < game->col)
 		{
-
-			load_sprites(game, this_col, this_row);
+			if (game->map[this_row][this_col] == 'P')
+			{
+				game->img.position.row_pos = this_row;
+				game->img.position.col_pos = this_col;
+			}
 			this_col++;
 		}
 		this_row++;

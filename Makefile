@@ -25,6 +25,10 @@ FILES = main.c \
 		./source/check_floor.c \
 		./source/print_map.c \
 		./source/load_sprites.c \
+		./source/init_position.c \
+		./source/key_input.c \
+		./source/player_move.c \
+
 
 
 
