@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 22:39:11 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:10:32 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ typedef struct s_map
 	int obj_p;
 	int obj_e;
 	int obj_c;
-
 }	t_map;
 
 typedef struct s_game
@@ -70,11 +69,13 @@ int	ft_count_line(char **matriz);
 
 void	ft_free_matriz(char **matriz);
 
-int	mlx_close();
+int	mlx_close(t_game *game);
 
 int this_collect(int key, t_game *game);
 
 int bye(int key, t_game *game);
+
+void free_ptr(t_game *game);
 
 //move
 int init_position(t_game *game);

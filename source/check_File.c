@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:45:18 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/10/19 19:36:12 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:10:57 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	check_File(char *file, char *sufx)
 	int	counter;
 
 	counter = 0;
-
 	while (file[counter + 1])
 		counter++;
 	while (counter >= 0 && file[counter] != '.')

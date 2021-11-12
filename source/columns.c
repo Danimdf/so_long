@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 19:53:57 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:18:03 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ char		**columns(char *file, t_game *game)
 	fd = open(file, O_RDONLY);
 	if (!fd)
 		return (NULL);
-
 	if (!check_File(file, "ber"))
 	{
 		printf("Error1000\n");

@@ -6,16 +6,33 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/12 19:24:07 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:13:58 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/so_long.h"
 
-int	mlx_close()
+void free_ptr(t_game *game)
 {
+	int i;
+
+	i = 0;
+	while (game->map[i])
+	{
+		free(game->map[i++]);
+	}
+	free(game->map);
+	mlx_destroy_window(game->mlx, game->mlx_win);
+	mlx_destroy_display(game->mlx);
+	free(game->mlx);
+}
+
+int	mlx_close(t_game *game)
+{
+	free_ptr(game);
 	printf("\nBye Bye\n");
-	exit (0);
+	exit (1);
+	return (1);
 }
 
 int	main(int argc, char **argv)
