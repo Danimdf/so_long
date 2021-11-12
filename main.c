@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 22:41:53 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/12 19:24:07 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	mlx_close()
 {
-	printf("Bye Bye\n");
+	printf("\nBye Bye\n");
 	exit (0);
 }
 
