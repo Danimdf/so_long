@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 19:37:31 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/11 20:40:44 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,7 @@ int	main(int argc, char **argv)
 	game.mlx = mlx_init();
 	game.mlx_win = mlx_new_window(game.mlx, game.col * 32, game.row * 32, "So_long");
 	init_position(&game);
-	//printf("%d\n", game.img.position.col_pos);
 	print_map(&game);
-	//printf("%d\n", game.img.position.col_pos);
 	mlx_key_hook(game.mlx_win, key_input, &game);
 	mlx_hook(game.mlx_win, 17, 1L<<0, mlx_close, game.mlx_win);
 

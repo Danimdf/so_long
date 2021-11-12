@@ -28,6 +28,8 @@ FILES = main.c \
 		./source/init_position.c \
 		./source/key_input.c \
 		./source/player_move.c \
+		./source/this_collect.c \
+		./source/bye.c \
 
 
 

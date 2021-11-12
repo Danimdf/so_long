@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 20:23:45 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:10:05 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,9 @@ void	ft_free_matriz(char **matriz);
 
 int	mlx_close();
 
+int this_collect(int key, t_game *game);
+
+int bye(t_game *game);
 
 //move
 int init_position(t_game *game);
