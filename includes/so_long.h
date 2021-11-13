@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 09:45:33 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 23:39:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,13 @@ int bye(int key, t_game *game);
 
 void free_ptr(t_game *game);
 
+
+
 //move
 int init_position(t_game *game);
 int	key_input(int key, t_game *game);
 int player_move(int key, t_game *game);
+int steps (int key, t_game *game);
 
 //print map
 int print_map(t_game *game);
@@ -97,6 +100,7 @@ int check_floor(t_game *game);
 //libft
 int ft_strcmp(const char *str1, const char *str2);
 void	*ft_memset(void *str, int c, size_t n);
+void    ft_bzero(void *s, size_t n);
 
 
 

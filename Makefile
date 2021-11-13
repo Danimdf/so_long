@@ -30,6 +30,7 @@ FILES = main.c \
 		./source/player_move.c \
 		./source/this_collect.c \
 		./source/bye.c \
+		./source/steps.c \
 
 
 

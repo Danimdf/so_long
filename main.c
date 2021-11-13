@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 09:46:54 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 23:41:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
+	ft_bzero(&game, sizeof(t_game));
 	if (argc != 2)
 	{
 		printf("Error! Input a valid .ber file\n");

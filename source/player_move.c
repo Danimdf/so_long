@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_move.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:19:51 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 09:46:07 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 23:16:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int player_move(int key, t_game *game)
 		bye(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[game->img.position.row_pos][++game->img.position.col_pos] = 'P';
-		game->steps++;
+		steps(key, game);
 	}
 	if (key == 'a' && \
 	game->map[game->img.position.row_pos][game->img.position.col_pos - 1] != '1')
@@ -36,7 +36,7 @@ int player_move(int key, t_game *game)
 		bye(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[game->img.position.row_pos][--game->img.position.col_pos] = 'P';
-		game->steps++;
+		steps(key, game);
 	}
 	if (key == 'w' && \
 	game->map[game->img.position.row_pos - 1][game->img.position.col_pos] != '1')
@@ -48,7 +48,7 @@ int player_move(int key, t_game *game)
 		bye(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[--game->img.position.row_pos][game->img.position.col_pos] = 'P';
-		game->steps++;
+		steps(key, game);
 	}
 	if (key == 's' && \
 	game->map[game->img.position.row_pos + 1][game->img.position.col_pos] != '1')
@@ -60,7 +60,7 @@ int player_move(int key, t_game *game)
 		bye(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[++game->img.position.row_pos][game->img.position.col_pos] = 'P';
-		game->steps++;
+		steps(key, game);
 	}
 	return (0);
 }
