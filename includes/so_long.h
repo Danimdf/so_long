@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 09:45:33 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 20:09:45 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ void free_ptr(t_game *game);
 int init_position(t_game *game);
 int	key_input(int key, t_game *game);
 int player_move(int key, t_game *game);
+int steps(int key, t_game *game);
+
 
 //print map
 int print_map(t_game *game);
@@ -93,11 +95,9 @@ void this_check_maps (t_game *game);
 int	map_walls(t_game *game);
 int check_inboard(t_game *game);
 int check_floor(t_game *game);
+int		ft_strcmp(const char *str1, const char *str2);
 
 //libft
-int ft_strcmp(const char *str1, const char *str2);
 void	*ft_memset(void *str, int c, size_t n);
-
-
 
 #endif

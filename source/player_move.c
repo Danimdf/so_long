@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:19:51 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 09:46:07 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 20:45:55 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ int player_move(int key, t_game *game)
 			return (0);
 		this_collect(key, game);
 		bye(key, game);
+		steps(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[game->img.position.row_pos][++game->img.position.col_pos] = 'P';
-		game->steps++;
+
 	}
 	if (key == 'a' && \
 	game->map[game->img.position.row_pos][game->img.position.col_pos - 1] != '1')
@@ -34,9 +35,10 @@ int player_move(int key, t_game *game)
 			return (0);
 		this_collect(key, game);
 		bye(key, game);
+		steps(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[game->img.position.row_pos][--game->img.position.col_pos] = 'P';
-		game->steps++;
+
 	}
 	if (key == 'w' && \
 	game->map[game->img.position.row_pos - 1][game->img.position.col_pos] != '1')
@@ -46,9 +48,10 @@ int player_move(int key, t_game *game)
 			return (0);
 		this_collect(key, game);
 		bye(key, game);
+		steps(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[--game->img.position.row_pos][game->img.position.col_pos] = 'P';
-		game->steps++;
+
 	}
 	if (key == 's' && \
 	game->map[game->img.position.row_pos + 1][game->img.position.col_pos] != '1')
@@ -58,9 +61,10 @@ int player_move(int key, t_game *game)
 			return (0);
 		this_collect(key, game);
 		bye(key, game);
+		steps(key, game);
 		game->map[game->img.position.row_pos][game->img.position.col_pos] = '0';
 		game->map[++game->img.position.row_pos][game->img.position.col_pos] = 'P';
-		game->steps++;
+
 	}
 	return (0);
 }
