@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/12 20:13:58 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 09:46:54 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,5 @@ int	main(int argc, char **argv)
 	print_map(&game);
 	mlx_key_hook(game.mlx_win, key_input, &game);
 	mlx_hook(game.mlx_win, 17, 1L<<0, mlx_close, game.mlx_win);
-
 	mlx_loop(game.mlx);
 }

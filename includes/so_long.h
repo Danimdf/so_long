@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/12 20:10:32 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 09:45:33 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ typedef struct s_game
 	int		col;
 	void	*mlx;
 	void	*mlx_win;
+	int steps;
 }	t_game;
 
 
