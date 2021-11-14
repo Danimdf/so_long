@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Werror
 INCLIB = $(INC)/../minilibx-linux
 INCLUDE = ./include
 
-//OBJS = $(FILES:.c=.o)
+OBJS = $(FILES:.c=.o)
 
 FILES = ./source/main.c \
 		./source/check_file.c \
@@ -31,9 +31,6 @@ FILES = ./source/main.c \
 		./utils/ft_bzero.c \
 		./source/bye.c \
 		./source/steps.c \
-
-
-
 
 LFLAGS = -L.. -lmlx -L$(INCLIB) -lXext -lX11 -lm
 
