@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:53:25 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/14 14:07:02 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:17:09 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	key_input(int key, t_game *game)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	if (key == 65307)
 		mlx_close(game);

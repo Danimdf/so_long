@@ -6,13 +6,13 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:45:18 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/12 20:10:57 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:47:17 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	check_File(char *file, char *sufx)
+int	check_file(char *file, char *sufx)
 {
 	int	counter;
 
@@ -25,4 +25,3 @@ int	check_File(char *file, char *sufx)
 		return (1);
 	return (0);
 }
-

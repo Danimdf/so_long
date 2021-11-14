@@ -6,20 +6,21 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 23:35:59 by marvin            #+#    #+#             */
-/*   Updated: 2021/11/13 21:32:45 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:26:03 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char *ptr;
-    ptr = ((char *)s);
-    while (n > 0)
-    {
-        *ptr = '\0';
-        ptr++;
-        n--;
-    }
+	char	*ptr;
+
+	ptr = ((char *)s);
+	while (n > 0)
+	{
+		*ptr = '\0';
+		ptr++;
+		n--;
+	}
 }

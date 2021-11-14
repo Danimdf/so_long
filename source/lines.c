@@ -6,13 +6,13 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/14 13:30:36 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:54:05 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-char		**lines(char *file, t_game *game)
+char	**lines(char *file, t_game *game)
 {
 	int		fd;
 	int		read_line;
@@ -21,7 +21,7 @@ char		**lines(char *file, t_game *game)
 	fd = open(file, O_RDONLY);
 	if (!fd)
 		return (NULL);
-	if (!check_File(file, "ber"))
+	if (!check_file(file, "ber"))
 	{
 		printf("Every map must have a .ber extension\n");
 		exit (1);

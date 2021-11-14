@@ -6,13 +6,12 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 12:53:02 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/10/06 19:12:37 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 14:18:00 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-
 
 # include <unistd.h>
 # include <stdlib.h>

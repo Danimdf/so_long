@@ -10,15 +10,14 @@ INCLUDE = ./include
 
 //OBJS = $(FILES:.c=.o)
 
-FILES = main.c \
-		./source/check_File.c \
+FILES = ./source/main.c \
+		./source/check_file.c \
 		./utils/ft_strcmp.c \
 		./utils/ft_memset.c \
 		./source/lines.c \
-		./source/ft_count_line.c \
 		./gnl/get_next_line.c \
 		./gnl/get_next_line_utils.c \
-		./source/this_Read.c \
+		./source/this_read_col.c \
 		./source/this_check_maps.c \
 		./source/map_walls.c \
 		./source/check_inboard.c \
@@ -31,8 +30,7 @@ FILES = main.c \
 		./source/this_collect.c \
 		./utils/ft_bzero.c \
 		./source/bye.c \
-		./source/steps.c
-
+		./source/steps.c \
 
 
 

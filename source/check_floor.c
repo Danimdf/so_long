@@ -6,36 +6,37 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 21:35:35 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/06 21:57:52 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:36:35 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int check_floor(t_game *game)
+int	check_floor(t_game *game)
 {
-	int thisRow;
-	int thisCol;
+	int	this_row;
+	int	this_col;
 
-	thisRow = 0;
-	while(thisRow < game->row)
+	this_row = 0;
+	while (this_row < game->row)
 	{
-		thisCol = 0;
-		while(thisCol < game->col)
+		this_col = 0;
+		while (this_col < game->col)
 		{
-			if (game->map[thisRow][thisCol] != '0' && \
-			game->map[thisRow][thisCol] != '1' && \
-			game->map[thisRow][thisCol] != 'P' && \
-			game->map[thisRow][thisCol] != 'E' && \
-			game->map[thisRow][thisCol] != 'C')
+			if (game->map[this_row][this_col] != '0' && \
+			game->map[this_row][this_col] != '1' && \
+			game->map[this_row][this_col] != 'P' && \
+			game->map[this_row][this_col] != 'E' && \
+			game->map[this_row][this_col] != 'C')
 			{
-				printf("Invalid Map: Please enter a map with characters 0, 1, P, E, C only.\n");
+				printf("Invalid Map: Please enter a map \
+				with characters 0, 1, P, E, C only.\n");
 				exit (1);
 				return (1);
 			}
-			thisCol++;
+			this_col++;
 		}
-		thisRow++;
+		this_row++;
 	}
 	return (0);
 }

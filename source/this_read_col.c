@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_line.c                                    :+:      :+:    :+:   */
+/*   this_read.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 10:34:59 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/10/19 19:36:22 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/11/14 19:06:15 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	ft_count_line(char **matriz)
+char	**this_read_col(char *file, t_game *game)
 {
-	int	counter;
+	int		index;
+	int		fd;
+	int		gnl;
 
-	counter = 0;
-	while (matriz[counter])
-		counter++;
-	return (counter);
-}
-
-void ft_free_matriz(char **matriz)
-{
-	int counter;
-
-	counter = 0;
-	while (matriz[counter])
+	game->map = lines(file, game);
+	if (game->map == NULL)
 	{
-		free (matriz[counter]);
-		counter++;
+		printf("invalid ptr: Please add a valid map\n");
+		exit (1);
 	}
-	free(matriz);
+	fd = open(file, O_RDONLY);
+	index = 0;
+	gnl = 1;
+	while (gnl)
+		gnl = get_next_line(fd, &game->map[index++]);
+	game->map[index] = NULL;
+	game->col = (ft_strlen(game->map[0]) - 1);
+	close(fd);
+	return (game->map);
 }
