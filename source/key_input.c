@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:53:25 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/14 13:59:57 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 14:07:02 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	key_input(int key, t_game *game)
 		mlx_close(game);
 	else
 		player_move(key, game);
-	printf("Número de passos:%d\n", game->steps);
+	printf("Number of steps:%d\n", game->steps);
 	print_map(game);
 	return (0);
 }
