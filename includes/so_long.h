@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 20:09:45 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 21:31:12 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ void	ft_free_matriz(char **matriz);
 
 int	mlx_close(t_game *game);
 
-int this_collect(int key, t_game *game);
+int	this_collect(int key, t_game *game);
 
-int bye(int key, t_game *game);
+int	bye(int key, t_game *game);
 
-void free_ptr(t_game *game);
+void	free_ptr(t_game *game);
 
 //move
 int init_position(t_game *game);
@@ -99,5 +99,6 @@ int		ft_strcmp(const char *str1, const char *str2);
 
 //libft
 void	*ft_memset(void *str, int c, size_t n);
+void    ft_bzero(void *s, size_t n);
 
 #endif

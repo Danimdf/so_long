@@ -29,6 +29,7 @@ FILES = main.c \
 		./source/key_input.c \
 		./source/player_move.c \
 		./source/this_collect.c \
+		./utils/ft_bzero.c \
 		./source/bye.c \
 		./source/steps.c
 

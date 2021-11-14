@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_input.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 21:53:25 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 20:59:08 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/11/13 23:35:59 by marvin            #+#    #+#             */
+/*   Updated: 2021/11/13 21:32:45 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	key_input(int key, t_game *game)
+void    ft_bzero(void *s, size_t n)
 {
-	int i;
-	i = 0;
-	if (key == 65307)
-	{
-		free_ptr(game);
-		exit(1);
-	}
-	else
-		player_move(key, game);
-	printf("Número de passos:%d\n", game->steps);
-	print_map(game);
-	return (0);
+	char *ptr;
+    ptr = ((char *)s);
+    while (n > 0)
+    {
+        *ptr = '\0';
+        ptr++;
+        n--;
+    }
 }

@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 20:08:42 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/13 21:48:11 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	mlx_close(t_game *game)
 {
 	free_ptr(game);
 	printf("\nBye Bye\n");
-	exit (1);
+	exit (0);
 	return (1);
 }
 
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	game.steps = 0;
+	ft_bzero(&game, sizeof(t_game));
 	if (argc != 2)
 	{
 		printf("Error! Input a valid .ber file\n");
@@ -54,6 +54,6 @@ int	main(int argc, char **argv)
 	init_position(&game);
 	print_map(&game);
 	mlx_key_hook(game.mlx_win, key_input, &game);
-	mlx_hook(game.mlx_win, 17, 1L<<0, mlx_close, game.mlx_win);
+	mlx_hook(game.mlx_win, 33, 1L<<2, mlx_close, &game);
 	mlx_loop(game.mlx);
 }
