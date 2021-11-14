@@ -14,7 +14,7 @@ FILES = main.c \
 		./source/check_File.c \
 		./utils/ft_strcmp.c \
 		./utils/ft_memset.c \
-		./source/columns.c \
+		./source/lines.c \
 		./source/ft_count_line.c \
 		./gnl/get_next_line.c \
 		./gnl/get_next_line_utils.c \

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   columns.c                                          :+:      :+:    :+:   */
+/*   lines.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/12 20:18:03 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:30:36 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-char		**columns(char *file, t_game *game)
+char		**lines(char *file, t_game *game)
 {
 	int		fd;
 	int		read_line;
@@ -23,11 +23,10 @@ char		**columns(char *file, t_game *game)
 		return (NULL);
 	if (!check_File(file, "ber"))
 	{
-		printf("Error1000\n");
+		printf("Every map must have a .ber extension\n");
 		exit (1);
 	}
 	game->row = 1;
-
 	read_line = 1;
 	while (read_line)
 	{
@@ -38,10 +37,6 @@ char		**columns(char *file, t_game *game)
 			game->row++;
 	}
 	close(fd);
-	if (game->row < 0)
-		printf("ERROR!1\n");
 	game->map = (char **)ft_calloc(game->row + 1, sizeof(char *));
-	if (game->map == NULL)
-		printf("ERROR!2\n");
 	return (game->map);
 }

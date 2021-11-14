@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/13 21:31:12 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:19:21 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	main(int argc, char **argv);
 
 char	**this_Read(char *file, t_game *game);
 
-char	**columns(char *file, t_game *game);
+char	**lines(char *file, t_game *game);
 
 int	ft_count_line(char **matriz);
 

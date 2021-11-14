@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/11/11 20:41:39 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:34:10 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	**this_Read(char *file, t_game *game)
 	int		fd;
 	int		gnl;
 
-	game->map = columns(file, game);
+	game->map = lines(file, game);
 	if (game->map == NULL)
 	{
-		printf("Error!miau\n");
+		printf("invalid ptr: Please add a valid map\n");
 		exit (1);
 	}
 	fd = open(file, O_RDONLY);
